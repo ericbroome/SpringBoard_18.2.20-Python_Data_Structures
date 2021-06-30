@@ -1,3 +1,4 @@
+# Done
 def two_list_dictionary(keys, values):
     """Given keys and values, make dictionary of those.
     
@@ -14,4 +15,9 @@ def two_list_dictionary(keys, values):
 
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
-   """
+    """
+    result = dict(zip(keys, values))
+    if(len(keys) > len(values)):
+        for index in range(len(values), len(keys)):
+            result[keys[index]] = None
+    print(result)

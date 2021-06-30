@@ -1,3 +1,4 @@
+# Done
 def find_greater_numbers(nums):
     """Return # of times a number is followed by a greater number.
 
@@ -19,3 +20,11 @@ def find_greater_numbers(nums):
         >>> find_greater_numbers([])
         0
     """
+
+    cnt = 0
+    for n1 in range(0, len(nums)):
+        for n2 in range(n1 + 1, len(nums)):
+            if nums[n1] < nums[n2]:
+                cnt += 1
+    return cnt
+

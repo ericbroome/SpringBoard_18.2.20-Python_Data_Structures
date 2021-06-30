@@ -1,3 +1,4 @@
+# Done
 def friend_date(a, b):
     """Given two friends, do they have any hobbies in common?
 
@@ -16,3 +17,6 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+
+    if len([item for item in a[2] if item in b[2]]) : return True
+    return False

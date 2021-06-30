@@ -1,3 +1,4 @@
+# Done
 def intersection(l1, l2):
     """Return intersection of two lists as a new list::
     
@@ -13,3 +14,5 @@ def intersection(l1, l2):
         >>> intersection([1, 2, 3], [4, 5, 6])
         []
     """
+
+    return [item for item in l1 if item in l2]

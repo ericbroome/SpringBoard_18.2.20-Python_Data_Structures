@@ -1,3 +1,4 @@
+# Done
 def three_odd_numbers(nums):
     """Is the sum of any 3 sequential numbers odd?"
 
@@ -13,3 +14,8 @@ def three_odd_numbers(nums):
         >>> three_odd_numbers([1, 2, 3, 3, 2])
         False
     """
+
+    for n in range(0, len(nums) - 2):
+        if (nums[n] + nums[n + 1] + nums[n + 2]) % 2 != 0:
+            return True
+    return False

@@ -1,3 +1,4 @@
+# Done
 def is_odd_string(word):
     """Is the sum of the character-positions odd?
 
@@ -29,3 +30,7 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    ttl = 0
+    for ch in word:
+        ttl = ttl + ord(ch)
+    return ttl % 2 != 0

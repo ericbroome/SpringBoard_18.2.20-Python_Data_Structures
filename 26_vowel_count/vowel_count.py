@@ -1,3 +1,4 @@
+# Done
 def vowel_count(phrase):
     """Return frequency map of vowels, case-insensitive.
 
@@ -7,3 +8,14 @@ def vowel_count(phrase):
         >>> vowel_count('HOW ARE YOU? i am great!') 
         {'o': 2, 'a': 3, 'e': 2, 'u': 1, 'i': 1}
     """
+
+    vowels = ('a', 'e', 'i', 'o', 'u')
+    result = dict()
+
+    for ch in phrase.lower():
+        if ch in vowels: 
+            if ch in result:
+                result[ch] += 1
+            else:
+                result[ch] = 1
+    return result

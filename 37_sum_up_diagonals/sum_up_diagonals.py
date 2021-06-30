@@ -1,3 +1,4 @@
+# Done
 def sum_up_diagonals(matrix):
     """Given a matrix [square list of lists], return sum of diagonals.
 
@@ -18,3 +19,10 @@ def sum_up_diagonals(matrix):
         >>> sum_up_diagonals(m2)
         30
     """
+
+    val = 0
+    col = 0
+    for row in matrix:
+        val += row[col] + row[(col - 1)]
+        col += 1
+    return val

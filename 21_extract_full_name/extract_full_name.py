@@ -1,3 +1,4 @@
+# Done
 def extract_full_names(people):
     """Return list of names, extracting from first+last keys in people dicts.
 
@@ -14,3 +15,9 @@ def extract_full_names(people):
         >>> extract_full_names(names)
         ['Ada Lovelace', 'Grace Hopper']
     """
+    
+    persons = []    
+    for person in people:
+        names = list(person.values())
+        persons.append(f"{names[0]} {names[1]}")
+    return persons

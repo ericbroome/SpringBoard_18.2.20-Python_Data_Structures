@@ -1,3 +1,4 @@
+# Done
 def same_frequency(num1, num2):
     """Do these nums have same frequencies of digits?
     
@@ -10,3 +11,15 @@ def same_frequency(num1, num2):
         >>> same_frequency(1212, 2211)
         True
     """
+
+    def countItems(lst):
+        """
+            Count the instances of items in a list
+        """
+        # Make
+        result = dict.fromkeys(set(lst), 0)
+        for n in lst:
+            result[n] += 1
+        return result
+
+    return countItems(str(num1)) == countItems(str(num2))

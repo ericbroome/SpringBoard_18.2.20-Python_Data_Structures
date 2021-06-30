@@ -1,3 +1,4 @@
+# Done
 def last_element(lst):
     """Return last item in list (None if list is empty.
     
@@ -7,3 +8,4 @@ def last_element(lst):
         >>> last_element([]) is None
         True
     """
+    return (lst or [None])[-1]
